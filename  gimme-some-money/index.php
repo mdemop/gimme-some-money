@@ -5,7 +5,7 @@ include "config.php";
 print <<<HTML
 <html>
 <head>
-<script src="/js/jquery-1.2.1.min.js" type="text/javascript"></script>
+<script src="{$GLOBALS['ROOT']}/js/jquery-1.2.1.min.js" type="text/javascript"></script>
 
 <style>
 body, td {
@@ -83,7 +83,7 @@ function click(i) {
 }
 
 function preview() {
-	$('#iconpreview').attr({src: '/images/icon' + item + '-small.png'});
+	$('#iconpreview').attr({src: '{$GLOBALS['ROOT']}/images/icon' + item + '-small.png'});
 	message = $('#message').attr('value');
 	$('#item_name').attr({value: "({$GLOBALS['ARTIST']} sponsorship) " + itemNames[item] + " - " + message});
 	$('#custom').attr({value: message});
@@ -140,7 +140,7 @@ HTML;
 $i=1;
 foreach($GLOBALS['ITEMS'] as $name => $price) {
 print <<<HTML
-		<td><a href="#" onclick="click($i);"><img src="/images/icon{$i}.png" /></a><p>$name \$$price</p></td>
+		<td><a href="#" onclick="click($i);"><img src="{$GLOBALS['ROOT']}/images/icon{$i}.png" /></a><p>$name \$$price</p></td>
 HTML;
 $i++;
 }
@@ -199,7 +199,7 @@ print <<<HTML
 <input type="hidden" name="tax" value="0">
 <input type="hidden" name="lc" value="US">
 <input type="hidden" name="bn" value="PP-DonationsBF">
-<input type="image" src="/images/btn_xpressCheckout2.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+<input type="image" src="{$GLOBALS['ROOT']}images/btn_xpressCheckout2.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
 
 </form>
 </div>
