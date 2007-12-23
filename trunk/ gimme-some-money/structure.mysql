@@ -1,0 +1,12 @@
+CREATE TABLE `gimme_transactions` (
+  `itemid` int(11) default NULL,
+  `amount` int(11) default NULL,
+  `comment` varchar(50) default NULL,
+  `buyer_email` varchar(40) default NULL,
+  `buyer_name` varchar(40) default NULL,
+  `buy_date` datetime default NULL,
+  `txn_id` varchar(40) default NULL,
+  `buyer_id` varchar(40) default NULL,
+  `id` int(11) NOT NULL auto_increment,
+  PRIMARY KEY  (`id`)
+)
