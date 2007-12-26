@@ -12,6 +12,9 @@ $GLOBALS['COMPLETED'] = "http://www.yoursite.com/money/completed/"; // where to 
 $GLOBALS['PAYPAL_EMAIL'] = "your@paypalemail.com"; // your paypal account email (or sandbox business account email)
 $GLOBALS['CURRENCY'] = "USD"; // default currency
 
+$GLOBALS['WIDGET_ITEMS'] = 10;
+$GLOBALS['WIDGET_ITEMS_PER_LINE'] = 5;
+
 //
 // ITEMS CONFIGURATION
 //

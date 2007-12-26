@@ -24,8 +24,16 @@ INSTALLATION
 	3. Upload to web server
 	4. Upload to your web server
 	5. Visit whichever URL you set in $GLOBALS[‘ROOT’]
-	6. Include widget-html.php on whichever pages you
+	6. Include gimmewidget.php on whichever pages you
 	   want it on
+	   
+INCLUDING THE WIDGET
+
+Depending on your installation path (this code assumes /gimme/), 
+this should do it:
+
+	<script language="javascript" type="text/javascript" src="/gimme/gimmewidget.php">
+	</script>
 
 CREDIT
 
