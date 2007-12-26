@@ -84,8 +84,15 @@ function click(i) {
 
 function preview() {
 	$('#iconpreview').attr({src: '{$GLOBALS['ROOT']}/images/icon' + item + '-small.png'});
-	message = $('#message').attr('value');
-	$('#item_name').attr({value: "({$GLOBALS['ARTIST']} sponsorship) " + itemNames[item] + " - " + message});
+	
+	if($('#message').attr('value')) {
+		message = $('#message').attr('value');
+	}
+	else {
+		message = '';
+	}
+	
+	$('#item_name').attr({value: "[{$GLOBALS['ARTIST']} sponsorship] " + itemNames[item] + " - " + message});
 	$('#custom').attr({value: message});
 	$('#choose').hide();
 	$('#entermessage').hide();
@@ -107,14 +114,6 @@ function startover() {
 
 function setmessage() {
 	var previewmessage = $('#message').attr('value');
-	// console.log($('#message').attr('value'));
-//	$('#messagepreview').html(previewmessage);
-
-}
-
-function showmessage() {
-	// alert(message);
-//	$('#messagepreview').hide();
 }
 
 </script>
@@ -130,7 +129,7 @@ print <<<HTML
 <h1>{$GLOBALS['ARTIST']}</h1>
 
 <div id="choose">
-<h2>gimme some money</h2>
+<!-- <h2>gimme some money</h2> -->
 <h3>choose your sponsorship level</h3>
 
 <table align="center" cellspacing="10">
@@ -195,7 +194,7 @@ print <<<HTML
 <input type="hidden" name="notify_url" value="{$GLOBALS['ROOT']}notify.php">
 <input type="hidden" name="return" value="{$GLOBALS['ROOT']}completed/">
 <input type="hidden" name="no_note" value="1">
-<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="currency_code" value="{$GLOBALS['CURRENCY']}">
 <input type="hidden" name="tax" value="0">
 <input type="hidden" name="lc" value="US">
 <input type="hidden" name="bn" value="PP-DonationsBF">
