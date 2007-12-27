@@ -5,7 +5,7 @@ include "config.php";
 print <<<HTML
 <html>
 <head>
-<script src="{$GLOBALS['ROOT']}/js/jquery-1.2.1.min.js" type="text/javascript"></script>
+<script src="{$GLOBALS['ROOT']}js/jquery-1.2.1.min.js" type="text/javascript"></script>
 
 <style>
 body, td {
@@ -52,7 +52,6 @@ li {
 </style>
 
 <script>
-
 var message;
 var item;
 var amount;
@@ -74,7 +73,7 @@ $count++;
 
 print <<<HTML
 
-function click(i) {
+function aclick(i) {
 	$('#entermessage').show();
 	$('#item_number').attr({value: i});
 	$('#amount').attr({value: itemPrices[i]});
@@ -101,6 +100,10 @@ function preview() {
 
 function pay() {
 	$('#pay').show();
+}
+
+function what() {
+	alert('what');
 }
 
 function startover() {
@@ -139,7 +142,7 @@ HTML;
 $i=1;
 foreach($GLOBALS['ITEMS'] as $name => $price) {
 print <<<HTML
-		<td><a href="#" onclick="click($i);"><img src="{$GLOBALS['ROOT']}/images/icon{$i}.png" /></a><p>$name \$$price</p></td>
+		<td><a href="#" onclick="aclick($i);"><img src="{$GLOBALS['ROOT']}/images/icon{$i}.png" /></a><p>$name \$$price</p></td>
 HTML;
 $i++;
 }
