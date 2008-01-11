@@ -195,7 +195,7 @@ print <<<HTML
 <input type="hidden" name="item_number" id="item_number" value="">
 <input type="hidden" name="no_shipping" value="1">
 <input type="hidden" name="notify_url" value="{$GLOBALS['ROOT']}notify.php">
-<input type="hidden" name="return" value="{$GLOBALS['ROOT']}completed/">
+<input type="hidden" name="return" value="{$GLOBALS['COMPLETED']}">
 <input type="hidden" name="no_note" value="1">
 <input type="hidden" name="currency_code" value="{$GLOBALS['CURRENCY']}">
 <input type="hidden" name="tax" value="0">
