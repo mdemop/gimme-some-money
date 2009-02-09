@@ -27,13 +27,13 @@ print <<<HTML
 	document.write("<img id=\"{$info[itemid]}\" style=\"padding: 2px;\" onmouseover=\"document.getElementById('gimme-message').innerHTML = '{$info['comment']}';\" onmouseout=\"document.getElementById('gimme-message').innerHTML = '&nbsp;';\" src=\"{$GLOBALS['ROOT']}/images/icon{$info[itemid]}-small.png\" />");
 HTML;
 
-if($i == ($GLOBALS['WIDGET_ITEMS_PER_LINE']-1)) {
+$info = mysql_fetch_array($sql);
+$i++;
+
+if($i == ($GLOBALS['WIDGET_ITEMS_PER_LINE'])) {
 	echo 'document.write("<br />");';
 	$i=0;
 }
-
-$info = mysql_fetch_array($sql);
-$i++;
 
 }
 ?>
