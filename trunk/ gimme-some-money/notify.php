@@ -1,7 +1,7 @@
 <?php
 include "config.php";
 
-@mysql_connect($sqlhost, $sql_user, $sql_pass); 
+@mysql_connect($sql_host, $sql_user, $sql_pass); 
 @mysql_select_db($sql_name);
 
 // read the post from PayPal system and add 'cmd'
