@@ -1,4 +1,7 @@
 v0.87
+= fixed $sqlhost issues (thanks Albert Sweigart)
+
+v0.87
 = obeys GLOBALS['COMPLETED'] now
 
 v0.86
